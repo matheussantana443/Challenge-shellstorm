@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tela de Login</title>
+    <style>
+      /* Estilos para o formulário */
+      body {
+        background-image: url("{% static 'images/logo.png' %}");;
+        background-size: cover;
+      }
+      form {
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      label {
+        display: block;
+        color: white;
+        font-size: 18px;
+        margin-top: 30px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 300px;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+      }
+      input[type="submit"] {
+        background-color: white;
+        color: blue;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #ddd;
+      }
+      .error-message {
+        color: red;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+{% block content %}
+    {% if message %}
+        <div class="error-message">{{ message }}</div>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Usuário:</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <input type="submit" value="Entrar">
+    </form>
+{% endblock %}
+    </form>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minha barra de navegação</title>
+	<style>
+		/* estilo para a barra de navegação */
+		nav {
+			background-color: #333;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		/* estilo para cada botão */
+		nav a {
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		/* estilo para o botão ativo */
+		nav a.active {
+			background-color: #4CAF50;
+		}
+
+		/* estilo quando o mouse passa sobre o botão */
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- barra de navegação -->
+	<nav>
+		<a class="active" href="/overview">Overview</a>
+		<a href="/equipes">Equipes</a>
+		<a href="/templates">Templates</a>
+		<a href="/conta">Conta</a>
+	</nav>
+
+	<!-- conteúdo da página -->
+	<div style="margin-top: 70px;">
+		<!-- conteúdo para a seção "Overview" -->
+		<h2 id="overview">Overview</h2>
+		<p>Conteúdo da seção Overview.</p>
+
+		<!-- conteúdo para a seção "Equipes" -->
+		<h2 id="equipes">Equipes</h2>
+		<p>Conteúdo da seção Equipes.</p>
+
+		<!-- conteúdo para a seção "Templates" -->
+		<h2 id="templates">Templates</h2>
+		<p>Conteúdo da seção Templates.</p>
+
+		<!-- conteúdo para a seção "Conta" -->
+		<h2 id="conta">Conta</h2>
+		<p>Conteúdo da seção Conta.</p>
+	</div>
+
+</body>
+</html>

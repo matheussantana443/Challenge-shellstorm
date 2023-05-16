@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page Personalizada</title>
+</head>
+<body>
+    <h1>Bem-vindo à minha página de destino personalizada</h1>
+    <p>Inscreva-se na nossa lista de e-mails para receber atualizações exclusivas:</p>
+    <form method="post">
+        {% csrf_token %}
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Inscreva-se">
+    </form>
+</body>
+</html>
